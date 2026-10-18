@@ -35,18 +35,6 @@
     return src;
   }
 
-  text("name-one", config.nameOne);
-  text("name-two", config.nameTwo);
-  text("wedding-date", config.date);
-  text("detail-date", config.date);
-  text("detail-location", config.location);
-  text("detail-reception", config.reception);
-  text("footer-names", clean(config.nameOne) + " & " + clean(config.nameTwo));
-
-  if (config.nameOne && config.nameTwo) {
-    document.title = clean(config.nameOne) + " & " + clean(config.nameTwo);
-  }
-
   var image = document.getElementById("engagement-photo");
   var placeholder = document.getElementById("photo-placeholder");
   var src = photoSrc(config.photoSrc);

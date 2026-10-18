@@ -19,10 +19,10 @@ const WEDDING_CONFIG = {
   date: "1/16/26",
 
   // Write the location the way guests should read it.
-  location: "tbd",
+  location: "Near Provo, UT (Exact location TBD)",
 
   // Reception place, time, or a short note. This site does not add details for you.
-  reception: "tbd",
+  reception: "Near Provo, UT (Exact location TBD)",
 
   // Engagement photo
   // 1. Put the image in the images folder (jpg, png, or webp).
