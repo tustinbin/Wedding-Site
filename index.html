@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Wedding invitation and details.">
+  <meta name="theme-color" content="#f7f3ec">
+  <title>Hailey and William's Wedding</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <noscript>
+    <style>
+      body { opacity: 1; }
+    </style>
+  </noscript>
+
+  <!-- Names, dates, photo, and links are filled from js/config.js -->
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <main id="content">
+    <header class="hero">
+      <div class="wrap">
+        <p class="announcement">We're getting married!</p>
+        <h1>
+          <span class="name" id="name-one">Hailey Wills</span>
+          <span class="amp">&amp;</span>
+          <span class="name" id="name-two">William Gifford</span>
+        </h1>
+      </div>
+
+      <div class="hero-photo">
+        <img id="engagement-photo" alt="" hidden>
+        <div id="photo-placeholder" class="photo-placeholder">
+          <svg class="sprig" viewBox="0 0 72 88" fill="none" aria-hidden="true">
+            <path d="M36 80V34" stroke="currentColor" stroke-width="1.15" stroke-linecap="round"/>
+            <path d="M36 68c-11-1.5-20-11-21-22 9 1.5 16 9 21 22z" stroke="currentColor" stroke-width="1.15" stroke-linejoin="round"/>
+            <path d="M36 58c11-2 19-12 18-23-8 2.5-14 11-18 23z" stroke="currentColor" stroke-width="1.15" stroke-linejoin="round"/>
+            <path d="M36 47c-8-4-13-13-11-23 7 4 10 13 11 23z" stroke="currentColor" stroke-width="1.15" stroke-linejoin="round"/>
+            <path d="M36 41c7-6 9-15 6-23-5 6-6 15-6 23z" stroke="currentColor" stroke-width="1.15" stroke-linejoin="round"/>
+          </svg>
+          <p>Engagement photo</p>
+        </div>
+        <div class="hero-card">
+          <p class="date-row"><span id="wedding-date">1/16/26</span></p>
+        </div>
+      </div>
+    </header>
+
+    <section class="address" aria-labelledby="address-heading">
+      <h2 id="address-heading" class="visually-hidden">Contact information</h2>
+      <a id="address-link" class="button button-primary">Share your contact information to receive an invite!</a>
+    </section>
+
+    <section class="section" aria-labelledby="details-heading">
+      <div class="wrap">
+        <div class="rule" aria-hidden="true"><span></span></div>
+        <h2 id="details-heading">Wedding Details</h2>
+        <p class="later">After invitations have gone out, this site will be updated to be an RSVP and registry site.</p>
+        <dl class="details">
+          <div>
+            <dt>Date</dt>
+            <dd id="detail-date">1/16/26</dd>
+          </div>
+          <div>
+            <dt>Temple</dt>
+            <dd id="detail-location">Near Provo, UT (Exact location TBD)</dd>
+          </div>
+          <div>
+            <dt>Reception</dt>
+            <dd id="detail-reception">Near Provo, UT (Exact location TBD)</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="rule" aria-hidden="true"><span></span></div>
+      <p>With love, <span id="footer-names">Hailey Wills &amp; William Gifford</span>.</p>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

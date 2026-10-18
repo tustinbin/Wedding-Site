@@ -1,0 +1,416 @@
+/* Wedding invitation
+   Colors, type, and spacing live here. Guest details live in js/config.js. */
+
+:root {
+  --ivory: #f7f3ec;
+  --paper: #fbf8f4;
+  --band: #f1ebe1;
+  --beige: #e4d9c8;
+  --line: #ddd4c6;
+  --sage: #5e7158;
+  --sage-deep: #3e5340;
+  --sage-mist: #e5ece2;
+  --ink: #2c2a26;
+  --ink-soft: #4a463f;
+  --serif: "Cormorant Garamond", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--ivory);
+}
+
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  border-top: 2px solid var(--sage);
+  opacity: 0;
+}
+
+body.is-ready {
+  opacity: 1;
+}
+
+@media (scripting: none) {
+  body {
+    opacity: 1;
+  }
+}
+
+h1,
+h2,
+p,
+figure,
+dl,
+dd {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+::selection {
+  background: #d7e0d3;
+  color: var(--ink);
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  z-index: 2;
+  padding: 0.5rem 0.9rem;
+  background: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.wrap {
+  width: min(100% - 2.5rem, 38rem);
+  margin-inline: auto;
+}
+
+.hero .wrap {
+  width: min(100% - 2.5rem, 46rem);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.hero {
+  padding: 2.75rem 0 0;
+  text-align: center;
+}
+
+.announcement {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.45rem, 3vw, 1.8rem);
+  line-height: 1.3;
+}
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.15rem;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(2.35rem, 7vw + 0.4rem, 5.15rem);
+  line-height: 0.92;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+}
+
+.name {
+  max-width: 100%;
+  padding-inline: 0.35rem;
+  overflow-wrap: break-word;
+}
+
+.amp {
+  margin: 0.12em 0;
+  color: var(--sage);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.48em;
+  line-height: 1;
+}
+
+.date-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  max-width: 100%;
+  color: var(--sage-deep);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.date-row span {
+  min-width: 0;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.date-row::before,
+.date-row::after {
+  content: "";
+  width: 1.75rem;
+  height: 1px;
+  flex: none;
+  background: var(--beige);
+}
+
+.hero-photo {
+  position: relative;
+  display: grid;
+  align-items: end;
+  justify-items: center;
+  height: clamp(17.5rem, 42vw, 24rem);
+  margin-top: 1.75rem;
+  padding-bottom: 1.25rem;
+  overflow: hidden;
+  background: #efe8dc;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+
+.photo-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  padding-top: 1.2rem;
+  color: var(--sage);
+  pointer-events: none;
+}
+
+.sprig {
+  width: 2.5rem;
+  height: auto;
+}
+
+.photo-placeholder p {
+  margin: 0;
+  color: var(--sage-deep);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hero-card {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 2rem, 24rem);
+  padding: 1.2rem 1.35rem 1.3rem;
+  background: rgba(251, 248, 244, 0.92);
+  text-align: center;
+}
+
+.hero-card .date-row {
+  margin: 0;
+}
+
+.section {
+  padding: 2.5rem 0 1.5rem;
+  text-align: center;
+}
+
+.address {
+  padding: 1.5rem 1.25rem 0.25rem;
+  text-align: center;
+}
+
+.later {
+  max-width: 28rem;
+  margin: 0 auto 1.75rem;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+.rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  width: 8.5rem;
+  margin: 0 auto 1.85rem;
+  color: var(--sage);
+}
+
+.rule::before,
+.rule::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: currentColor;
+  opacity: 0.55;
+}
+
+.rule span {
+  width: 0.34rem;
+  height: 0.34rem;
+  flex: none;
+  border: 1px solid currentColor;
+  transform: rotate(45deg);
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(2rem, 4vw, 2.55rem);
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.lede {
+  max-width: 28rem;
+  margin: 0 auto 1.6rem;
+}
+
+.details {
+  display: grid;
+  gap: 1.85rem;
+  margin-top: 2rem;
+}
+
+.later + .details {
+  margin-top: 0;
+}
+
+.details dt {
+  margin-bottom: 0.3rem;
+  color: var(--sage-deep);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.details dd {
+  max-width: 26rem;
+  margin-inline: auto;
+  font-family: var(--serif);
+  font-size: clamp(1.45rem, 3vw, 1.8rem);
+  line-height: 1.3;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: min(100%, 22rem);
+  min-height: 3rem;
+  padding: 0.8rem 1.35rem;
+  border: 1px solid var(--sage-deep);
+  font: 500 1rem/1.3 var(--sans);
+  text-align: center;
+  text-wrap: balance;
+  text-decoration: none;
+}
+
+.button-primary {
+  background: var(--sage-deep);
+  color: var(--paper);
+}
+
+.button[aria-disabled="true"] {
+  cursor: default;
+}
+
+a.button:focus-visible,
+.skip-link:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+}
+
+@media (hover: hover) {
+  .button-primary:hover {
+    background: #314232;
+    border-color: #314232;
+  }
+}
+
+.button-primary:active {
+  background: #314232;
+  border-color: #314232;
+}
+
+.site-footer {
+  padding: 2.75rem 0 3.5rem;
+  text-align: center;
+}
+
+.site-footer p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--ink-soft);
+}
+
+@media (min-width: 700px) {
+  .hero {
+    padding-top: 3.5rem;
+  }
+
+  .section {
+    padding-top: 3rem;
+  }
+
+  .site-footer {
+    padding-bottom: 3.5rem;
+  }
+}
+
+@media print {
+  body {
+    opacity: 1;
+    border-top: none;
+    background: white;
+  }
+
+  .skip-link {
+    display: none;
+  }
+
+  .hero-card {
+    background: white;
+  }
+
+  .button {
+    border-color: var(--ink);
+  }
+}
