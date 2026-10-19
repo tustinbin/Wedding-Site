@@ -366,6 +366,28 @@ a.button:focus-visible,
   }
 }
 
+@media (min-width: 900px) {
+  .hero {
+    padding-top: 1.75rem;
+  }
+
+  .hero-photo {
+    width: min(100% - 3rem, 34rem);
+    height: min(26rem, 46vh);
+    margin-inline: auto;
+  }
+
+  .hero-photo::before {
+    background:
+      linear-gradient(to bottom, var(--ivory) 0%, transparent 18%, transparent 72%, var(--ivory) 100%),
+      linear-gradient(to right, var(--ivory) 0%, transparent 10%, transparent 90%, var(--ivory) 100%);
+  }
+
+  .address {
+    padding-top: 0.5rem;
+  }
+}
+
 @media print {
   body {
     opacity: 1;
