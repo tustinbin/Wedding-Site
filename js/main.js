@@ -35,6 +35,13 @@
     return src;
   }
 
+  var backgroundColor = clean(config.backgroundColor);
+  if (/^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test(backgroundColor)) {
+    document.documentElement.style.setProperty("--ivory", backgroundColor);
+    var theme = document.querySelector('meta[name="theme-color"]');
+    if (theme) theme.setAttribute("content", backgroundColor);
+  }
+
   var image = document.getElementById("engagement-photo");
   var placeholder = document.getElementById("photo-placeholder");
   var src = photoSrc(config.photoSrc);

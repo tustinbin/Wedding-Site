@@ -150,46 +150,25 @@ h1 {
   line-height: 1;
 }
 
-.date-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.85rem;
-  max-width: 100%;
-  color: var(--sage-deep);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.date-row span {
-  min-width: 0;
-  text-align: center;
-  text-wrap: balance;
-}
-
-.date-row::before,
-.date-row::after {
-  content: "";
-  width: 1.75rem;
-  height: 1px;
-  flex: none;
-  background: var(--beige);
-}
-
 .hero-photo {
   position: relative;
   display: grid;
   align-items: end;
   justify-items: center;
-  height: clamp(17.5rem, 42vw, 24rem);
-  margin-top: 1.75rem;
-  padding-bottom: 1.25rem;
+  height: clamp(20rem, 52vw, 34rem);
+  margin-top: 0.25rem;
+  padding-bottom: 0;
   overflow: hidden;
-  background: #efe8dc;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  background: var(--ivory);
+}
+
+.hero-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(to bottom, var(--ivory) 0%, transparent 20%, transparent 70%, var(--ivory) 100%);
 }
 
 .hero-photo img {
@@ -199,6 +178,7 @@ h1 {
   height: 100%;
   max-width: none;
   object-fit: cover;
+  object-position: center 38%;
 }
 
 .photo-placeholder {
@@ -225,19 +205,6 @@ h1 {
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-}
-
-.hero-card {
-  position: relative;
-  z-index: 1;
-  width: min(100% - 2rem, 24rem);
-  padding: 1.2rem 1.35rem 1.3rem;
-  background: rgba(251, 248, 244, 0.92);
-  text-align: center;
-}
-
-.hero-card .date-row {
-  margin: 0;
 }
 
 .section {
@@ -321,11 +288,11 @@ h2 {
 }
 
 .details dd {
-  max-width: 26rem;
+  max-width: 22rem;
   margin-inline: auto;
   font-family: var(--serif);
-  font-size: clamp(1.45rem, 3vw, 1.8rem);
-  line-height: 1.3;
+  font-size: clamp(1.35rem, 2.4vw, 1.65rem);
+  line-height: 1.35;
 }
 
 .button {
@@ -336,7 +303,10 @@ h2 {
   min-height: 3rem;
   padding: 0.8rem 1.35rem;
   border: 1px solid var(--sage-deep);
-  font: 500 1rem/1.3 var(--sans);
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.3;
   text-align: center;
   text-wrap: balance;
   text-decoration: none;
@@ -404,10 +374,6 @@ a.button:focus-visible,
 
   .skip-link {
     display: none;
-  }
-
-  .hero-card {
-    background: white;
   }
 
   .button {

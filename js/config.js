@@ -11,6 +11,10 @@
 // To change fixed sentences, edit index.html.
 
 const WEDDING_CONFIG = {
+  // Page background. Change this hex color, then refresh.
+  // Examples: "#f7f3ec" ivory, "#f3efe6" warmer cream, "#eef2ea" soft sage.
+  backgroundColor: "#f7f3ec",
+
   // Names, in the order you want them shown.
   nameOne: "Hailey Wills",
   nameTwo: "William Gifford",
@@ -29,8 +33,8 @@ const WEDDING_CONFIG = {
   // 2. Set photoSrc, for example: "images/engagement.jpg"
   // A wide photo fits the banner best. Leave photoSrc as "" until you have one.
   // photoAlt is read aloud to guests using screen readers. Describe the picture.
-  photoSrc: "",
-  photoAlt: "Engagement photo",
+  photoSrc: "IMG_6538.JPG",
+  photoAlt: "Hailey Wills and William Gifford sitting together in a field",
 
   // Google Form where guests share contact information for an invite.
   // Example: "https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform"
