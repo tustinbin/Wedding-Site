@@ -20,7 +20,7 @@ const WEDDING_CONFIG = {
   nameTwo: "William Gifford",
 
   // Shown on the photo and again in Wedding Details.
-  date: "1/16/26",
+  date: "1/16/27",
 
   // Write the location the way guests should read it.
   location: "Near Provo, UT (Exact location TBD)",
