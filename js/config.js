@@ -1,14 +1,13 @@
 // Wedding website configuration
 // ---------------------------------
-// This is the only file you need to edit for names, the date, locations,
-// your photo, and links. Save the file, then refresh the browser.
+// Edit links here, save, then refresh the browser.
 //
 // Leave a value as "" or as its [PLACEHOLDER] to keep the empty state:
-//   - photoSrc "" shows the photo placeholder behind the greeting
-//   - addressFormUrl placeholder shows the button, but the button
-//     stays inactive until you paste a real https link
+//   - photoSrc "" shows the photo placeholder
+//   - empty URLs keep those hub links inactive until you paste a real https link
+//   - rsvpQr "" keeps the RSVP "Soon" placeholder until you add a QR image
 //
-// To change fixed sentences, edit index.html.
+// To change fixed sentences and wedding details, edit index.html.
 
 const WEDDING_CONFIG = {
   // Page background. Change this hex color, then refresh.
@@ -19,24 +18,30 @@ const WEDDING_CONFIG = {
   nameOne: "Hailey Wills",
   nameTwo: "William Gifford",
 
-  // Shown on the photo and again in Wedding Details.
+  // Shown in Wedding Details.
   date: "1/16/27",
 
-  // Write the location the way guests should read it.
-  location: "Near Provo, UT (Exact location TBD)",
+  location: "Provo City Center",
 
-  // Reception place, time, or a short note. This site does not add details for you.
-  reception: "Near Provo, UT (Exact location TBD)",
+  reception: "Jordanelle Ridge Barn, 2013 Coyote Cyn Pkwy, Heber City, UT 84032",
 
   // Engagement photo
-  // 1. Put the image in the images folder (jpg, png, or webp).
+  // 1. Put the image in the project folder or images/ (jpg, png, or webp).
   // 2. Set photoSrc, for example: "images/engagement.jpg"
-  // A wide photo fits the banner best. Leave photoSrc as "" until you have one.
-  // photoAlt is read aloud to guests using screen readers. Describe the picture.
+  // photoAlt is read aloud to guests using screen readers.
   photoSrc: "IMG_6538.JPG",
   photoAlt: "Hailey Wills and William Gifford sitting together in a field",
 
-  // Google Form where guests share contact information for an invite.
-  // Example: "https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform"
-  addressFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc8xCRUOD-zOwyzB0O_WcvAdUhHQuABxrkfkJzU3AKl3saIMg/viewform?usp=publish-editor",
+  // Hub links and QR images
+  // Venmo
+  venmoUrl: "https://venmo.com/u/giffowil",
+  venmoQr: "images/venmo.jpg",
+
+  // Registry
+  registryUrl: "https://www.amazon.com/wedding/guest-view/38QXKHRFDUWW",
+  registryQr: "images/registryqr.png",
+
+  // RSVP
+  rsvpUrl: "https://docs.google.com/forms/d/e/1FAIpQLScYs8PNYqTkmhdM03GsSLKxw7Z7eekLi9g1zVjDhCKA8Jf6Ow/viewform?usp=publish-editor",
+  rsvpQr: "images/rsvpqr.png",
 };

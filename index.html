@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Wedding invitation and details.">
+  <meta name="description" content="RSVP, registry, and wedding details for Hailey and William.">
   <meta name="theme-color" content="#f7f3ec">
   <title>Hailey and William's Wedding</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -19,7 +19,7 @@
     </style>
   </noscript>
 
-  <!-- Names, dates, photo, and links are filled from js/config.js -->
+  <!-- Photo and links are filled from js/config.js -->
   <a class="skip-link" href="#content">Skip to content</a>
 
   <main id="content">
@@ -48,30 +48,52 @@
       </div>
     </header>
 
-    <section class="address" aria-labelledby="address-heading">
-      <h2 id="address-heading" class="visually-hidden">Contact information</h2>
-      <a id="address-link" class="button button-primary">Share your contact information to receive an invite!</a>
+    <section class="hub" aria-labelledby="hub-heading">
+      <h2 id="hub-heading" class="visually-hidden">Venmo, RSVP, and registry</h2>
+      <div class="hub-grid">
+        <div class="hub-item">
+          <img src="images/venmo.jpg" alt="Venmo QR code">
+          <a id="venmo-link" class="hub-link">Venmo</a>
+        </div>
+        <div class="hub-item" id="rsvp-item">
+          <img id="rsvp-qr" alt="RSVP QR code" hidden>
+          <div id="rsvp-soon" class="qr-soon" aria-hidden="true">Soon</div>
+          <a id="rsvp-link" class="hub-link">RSVP</a>
+          <p class="hub-note">Please RSVP by 12/16/26</p>
+        </div>
+        <div class="hub-item">
+          <img src="images/registryqr.png" alt="Registry QR code">
+          <a id="registry-link" class="hub-link">Registry</a>
+        </div>
+      </div>
     </section>
 
     <section class="section" aria-labelledby="details-heading">
       <div class="wrap">
         <div class="rule" aria-hidden="true"><span></span></div>
         <h2 id="details-heading">Wedding Details</h2>
-        <p class="later">After invitations have gone out, this site will be updated to be an RSVP and registry site.</p>
-        <dl class="details">
-          <div>
-            <dt>Date</dt>
-            <dd id="detail-date">1/16/27</dd>
-          </div>
-          <div>
-            <dt>Temple</dt>
-            <dd id="detail-location">Near Provo, UT<br>(Exact location TBD)</dd>
-          </div>
-          <div>
-            <dt>Reception</dt>
-            <dd id="detail-reception">Near Provo, UT<br>(Exact location TBD)</dd>
-          </div>
-        </dl>
+        <p class="details-date"><span id="detail-date">January 16, 2027</span></p>
+        <div class="details-cols">
+          <section class="detail-card">
+            <p class="detail-kicker">Temple</p>
+            <h3 class="detail-col-title">Sealing</h3>
+            <p class="venue">Provo City Center</p>
+            <p class="detail-sub">A separate, invitation-only ceremony</p>
+          </section>
+          <section class="detail-card">
+            <p class="detail-kicker">All Welcome</p>
+            <div class="detail-events">
+              <h3 class="detail-col-title detail-event-title">Ring<br>Ceremony</h3>
+              <div class="detail-events-rule" aria-hidden="true"></div>
+              <h3 class="detail-col-title detail-event-title">Reception</h3>
+              <p class="detail-time">3:30</p>
+              <p class="detail-time detail-time-reception">4:00&ndash;6:00</p>
+            </div>
+            <p class="detail-venue">Jordanelle Ridge Barn</p>
+            <p class="address">2013 Coyote Cyn Pkwy<br>Heber City, UT 84032</p>
+            <p class="detail-sub">Food provided</p>
+          </section>
+        </div>
       </div>
     </section>
   </main>
@@ -79,7 +101,15 @@
   <footer class="site-footer">
     <div class="wrap">
       <div class="rule" aria-hidden="true"><span></span></div>
-      <p>With love, <span id="footer-names">Hailey Wills &amp; William Gifford</span>.</p>
+      <div class="footer-contact">
+        <p class="footer-prompt">If you would like a physical/digital copy of the wedding invite or have any questions, please reach out to us!</p>
+        <p class="footer-phones">
+          William: <a href="tel:+13609094387">(360) 909-4387</a>
+          <span class="footer-phones-sep" aria-hidden="true">&middot;</span>
+          Hailey: <a href="tel:+12679052256">(267) 905-2256</a>
+        </p>
+      </div>
+      <p class="footer-love">With love, <span id="footer-names">Hailey Wills &amp; William Gifford</span>.</p>
     </div>
   </footer>
 

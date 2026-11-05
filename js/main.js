@@ -1,4 +1,4 @@
-// Fills the page from js/config.js and hides links that are not ready yet.
+// Applies photo, background, and hub links from js/config.js.
 
 (function () {
   var config = typeof WEDDING_CONFIG === "undefined" ? null : WEDDING_CONFIG;
@@ -10,11 +10,6 @@
   if (!config) {
     ready();
     return;
-  }
-
-  function text(id, value) {
-    var el = document.getElementById(id);
-    if (el) el.textContent = value || "";
   }
 
   function clean(value) {
@@ -64,14 +59,38 @@
     if (!anchor) return;
     if (url) {
       anchor.href = url;
+      anchor.target = "_blank";
+      anchor.rel = "noopener noreferrer";
       anchor.removeAttribute("aria-disabled");
     } else {
       anchor.removeAttribute("href");
+      anchor.removeAttribute("target");
+      anchor.removeAttribute("rel");
       anchor.setAttribute("aria-disabled", "true");
     }
   }
 
-  applyLink(document.getElementById("address-link"), usableUrl(config.addressFormUrl));
+  function applyQr(img, soon, path) {
+    var qr = photoSrc(path);
+    if (img && qr) {
+      img.hidden = false;
+      img.src = qr;
+      if (soon) soon.hidden = true;
+    } else if (img) {
+      img.hidden = true;
+      img.removeAttribute("src");
+      if (soon) soon.hidden = false;
+    }
+  }
+
+  applyLink(document.getElementById("venmo-link"), usableUrl(config.venmoUrl));
+  applyLink(document.getElementById("registry-link"), usableUrl(config.registryUrl));
+  applyLink(document.getElementById("rsvp-link"), usableUrl(config.rsvpUrl));
+  applyQr(
+    document.getElementById("rsvp-qr"),
+    document.getElementById("rsvp-soon"),
+    config.rsvpQr
+  );
 
   ready();
 })();
