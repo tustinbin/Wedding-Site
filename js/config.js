@@ -12,7 +12,7 @@
 const WEDDING_CONFIG = {
   // Page background. Change this hex color, then refresh.
   // Examples: "#f7f3ec" ivory, "#f3efe6" warmer cream, "#eef2ea" soft sage.
-  backgroundColor: "#f7f3ec",
+  backgroundColor: "#f4ecd8",
 
   // Names, in the order you want them shown.
   nameOne: "Hailey Wills",
