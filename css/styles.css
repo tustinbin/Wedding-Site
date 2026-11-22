@@ -271,6 +271,18 @@ h1 {
   text-wrap: balance;
 }
 
+.hub-banner {
+  width: min(100%, 26rem);
+  margin: 1rem auto 0;
+  color: var(--sage-deep);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(0.95rem, 2.4vw, 1.1rem);
+  line-height: 1.35;
+  text-align: center;
+  text-wrap: balance;
+}
+
 .hub-link[aria-disabled="true"] {
   color: var(--ink-soft);
   text-decoration: none;
