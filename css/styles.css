@@ -13,6 +13,7 @@
   --ink: #2c2a26;
   --ink-soft: #4a463f;
   --serif: "Cormorant Garamond", "Palatino Linotype", Palatino, Georgia, serif;
+  --display: "Playfair Display", "Times New Roman", Times, serif;
   --sans: "Source Sans 3", "Segoe UI", sans-serif;
 }
 
@@ -128,9 +129,11 @@ img {
 }
 
 h1 {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1.15rem;
   margin-top: 1.15rem;
   margin-bottom: -1.1rem;
   font-family: var(--serif);
@@ -142,18 +145,30 @@ h1 {
 }
 
 .name {
+  position: relative;
+  z-index: 1;
   max-width: 100%;
   padding-inline: 0.35rem;
   overflow-wrap: break-word;
 }
 
 .amp {
-  margin: 0.42em 0 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  margin: 0;
   color: var(--sage);
-  font-style: italic;
+  font-family: var(--display);
+  font-style: normal;
   font-weight: 400;
-  font-size: 0.48em;
-  line-height: 1;
+  font-size: clamp(3.75rem, 15vw, 6.5rem);
+  line-height: 0.75;
+  font-synthesis: none;
+  opacity: 0.3;
+  pointer-events: none;
+  transform: translate(-50%, -56%);
+  user-select: none;
 }
 
 .hero-photo {
